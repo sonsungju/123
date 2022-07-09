@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <button type="text" id="btn">추가</button>
+    <button type="text" id="get">get</button>
+    <div id="box"></div>
+    <script>
+    window.addEventListener('load', function(){
+        console.log('load');
+        const gArray = JSON.parse(window.localStorage.getItem('aaa'));
+        const aaa = window.localStorage.getItem('aaa');
+
+        if(aaa === null) {
+            console.log('null');
+        }else{
+            for(let i = 0; i < gArray.length; i++) {
+                const input = document.createElement('input');
+                const div = document.createElement('div');
+                div.appendChild(input);
+                document.querySelector('#box').appendChild(div);
+                input.value = gArray[i];
+                }
+            }
+        });
+document
+    .querySelector('#btn')
+    .addEventListener('click', function() {
+        const div = document.createElement('div');
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        div.appendChild(input);
+        document.querySelector('#box').appendChild(div);
+    })
+
+    let gArray = [];
+    document
+    .querySelector('#get')
+    .addEventListener('click', function () {
+        const arr = document.querySelectorAll('input');
+        for (let i=0; i < arr.length;i++) {
+                gArray.push(arr[i].value)
+            }
+            console.log(gArray);
+            JSON.stringify(gArray);
+            localStorage.setItem('aaa',JSON.stringify(gArray));
+        })
+    </script>
+</body>
+</html>

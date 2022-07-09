@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {padding: 0; margin: 0;}
+
+    #container{
+        margin: 0 auto;
+        border: 1px dashed black;
+        background-color: darkseagreen;
+        width: 1010px;
+    }
+    #header{
+        width: 1000px;
+        height: 70px;
+        margin-top: 10px;
+        border: 1px solid black;
+    }
+    #nav{
+        width: 290px;
+        height: 500px;
+        text-align: center;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-right: 10px;
+        float: left;
+        list-style-type: none;
+        font-size: 40px;
+    }
+    #nav a{
+        display: block;
+    }
+    #section{
+        width: 700px;
+        height: 500px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        float: left;
+        overflow: auto;
+    }
+    iframe{
+        border: 0px;
+        width: 700px;
+        height: 500px;
+
+    }
+    #footer{
+        width: 1000px;
+        height: 70px;
+        margin-top: 10px;
+        border: 1px solid black;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        clear: both;
+
+    }
+    a:hover{
+        color: red;
+        background-color: yellow;
+    }
+    a:active{
+        color: blueviolet;
+    }
+
+</style>
+<body>
+    <div id="container">
+        <div id="header"><img src="가로그림.jpg" width="1000" height="70"></div>
+        <div id="nav">
+                <a href="산학 2번.html" target="frame1"> 메인메뉴1 </a>
+                <a href="https://www.paris.co.kr/" target="frame1"> 메인메뉴2 </a>
+        </div>
+        <div id="section">
+            <iframe src="https://www.paris.co.kr/" name="frame1"></iframe>
+        </div>
+        <div id="footer">Copyright 뭐시기</div>
+    </div>
+</body>
+</html>

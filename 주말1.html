@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>  
+<body>
+    <input type="text" id="input">
+    <button onclick="myfunction()">클릭</button>
+    <script>
+        let obj = [];
+        function myfunction() {
+            let ip = document.querySelector('#input').value;
+            obj.unshift(ip);
+            console.log(obj);
+        }
+    </script>
+
+</body>
+</html>
