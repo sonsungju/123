@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    #container{
+        background-image: url(이미지1.jpg);
+        width: 1200px;
+        margin: 0px auto;
+    }
+    .q{
+        text-align: center;
+        margin-top: 0px auto;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: auto;
+        margin: 0px;
+        padding: 10px;  
+    }
+    #header{
+        width: 1200px;
+        height: 600px;
+        margin-top: 10px;
+    }
+    #number{
+        background-color: slategray;
+        text-align: center;
+    }
+    #number ul{
+        padding: 0px;
+        margin: 0px;
+        width: 1200px;
+    }
+    #number ul li{
+        display: inline;
+        list-style-type: none;
+        margin: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+    #number ul li a{
+        color: wheat;
+        text-decoration: underline;
+    }
+    #number ul li :hover{
+        color: darkblue;
+    }
+    #section{
+        width: 1200px;
+        height: 600px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        overflow: auto;
+    }
+    iframe{
+        border: 0px;
+        width: 1200px;
+        height: 600px;
+    }
+    #footer{
+        width: 1200px;
+        height: 70px;
+        margin-top: 10px;
+        border: 1px solid black;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+    }
+    a:hover{
+        color: red;
+        background-color: yellow;
+    }
+    a:active{
+        color: blueviolet;
+    }
+</style>
+<body id="container">
+    <div class="q"><img src="이미지2.jpg" width="1200px" height="600px"></div>
+    <h1>암살자 소개</h1>
+        <div id="header"><img src="리퍼2.png" width="1200px" height="600px"></div>
+        <div id="number">
+        <ul>
+            <li><a href="https://pinkgamesesang.tistory.com/2422" target="frame1">리퍼 정보</a></li>
+            <li><a href="https://blog.naver.com/PostView.naver?blogId=grownbb&logNo=222647593716" target="frame1">달의소리 세팅</a></li>
+            <li><a href="https://m.blog.naver.com/jmstory2020/222635526538" target="frame1">갈증 세팅</a></li>
+        </ul>
+        <div id="section">
+            <iframe src="https://pinkgamesesang.tistory.com/2422" name="frame1"></iframe>
+        </div>
+        <div id="footer">리퍼</div>
+    </div>
+    <div id="header"><img src="블레이드.jpg" width="1200px" height="600px"></div>
+        <div id="number">
+        <ul>
+            <li><a href="https://www.fmkorea.com/index.php?mid=lostark&category=1378552858&document_srl=4239627970" target="frame2">블레이드 정보</a></li>
+            <li><a href="https://canfactory.tistory.com/857" target="frame2">버스트 세팅</a></li>
+            <li><a href="https://canfactory.tistory.com/848" target="frame2">잔재된기운 세팅</a></li>
+        </ul>
+        <div id="section">
+            <iframe src="https://www.fmkorea.com/index.php?mid=lostark&category=1378552858&document_srl=4239627970" name="frame2"></iframe>
+        </div>
+        <div id="footer">블레이드</div>
+    </div>
+    <div id="header"><img src="데모닉.jpg" width="1200px" height="600px"></div>
+        <div id="number">
+        <ul>
+            <li><a href="https://m.blog.naver.com/travelman_ff/222631690123" target="frame3">데모닉 정보</a></li>
+            <li><a href="https://www.fmkorea.com/4770841116" target="frame3">억모닉 세팅</a></li>
+            <li><a href="https://www.fmkorea.com/4192059583" target="frame3">충모닉 세팅</a></li>
+        </ul>
+        <div id="section">
+            <iframe src="https://m.blog.naver.com/travelman_ff/222631690123" name="frame3"></iframe>
+        </div>
+        <div id="footer">데모닉</div>
+    </div>
+  <head>
+    <style media="screen">
+      #divClock{
+        font-size: 30px;
+        color: white;
+        text-align: left;
+      }
+    </style>
+    <script type="text/javascript">
+      function showClock(){
+        var currentDate = new Date();
+        var divClock = document.getElementById('divClock');
+        var msg = "현재 시간 : ";
+        if(currentDate.getHours()>12){      //시간이 12보다 크다면 오후 아니면 오전
+          msg += "오후 ";
+          msg += currentDate.getHours()-12+"시 ";
+       }
+       else {
+         msg += "오전 ";
+         msg += currentDate.getHours()+"시 ";
+       }
+ 
+        msg += currentDate.getMinutes()+"분 ";
+        msg += currentDate.getSeconds()+"초";
+ 
+        divClock.innerText = msg;
+ 
+        if (currentDate.getMinutes()>58) {    //정각 1분전부터 빨강색으로 출력
+          divClock.style.color="red";
+        }
+        setTimeout(showClock,1000);  //1초마다 갱신
+      }
+    </script>
+  </head>
+  <body onload="showClock()">
+    <div id="divClock" class="clock">
+    </div>
+  </body>
+</html>
+</body>
+</html>
